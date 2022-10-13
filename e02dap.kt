@@ -40,30 +40,17 @@ var i = 1
     }
     println("")
 // EJERCICIO 6
- val rows = 5
- var k = 0
- var count = 0
- var count1 = -1
-    for (j in 1..rows) {
-        for (space in 1..rows - j) {
-            print("  ")
-            ++count
-        }
-        while (k != 2 * j - 1) {
-            if (count <= rows - 1) {
-                print((j + k - 1).toString() + " ")
-                ++count
-            } else {
-                ++count1
-                print((j + k - 2 * count1 - 1).toString() + " ")
-            }
-            ++k
-        }
-        k = 0
-        count = k
-        count1 = count
-        println()
-    }
+    val h = 4
+    val f = 3
+ for(f:Int in 1..h){
+   // dibujamos los espacios
+   for(i:Int in 1..(h-f)) print("*")
+   //dibujamos los numeros de forma creciente
+   for(i:Int in 1..f) print(i)
+   //dibujamos los numeros de forma decreciente
+   for(i:Int in (f-1) downTo 1) print(i)
+   println("")
+ }
 
 // EJERCICIO 7
 val a = arrayOf("campamento", "cardinales", "polen", null, "hoja", "hermana", "relatividad", null)
